@@ -1,0 +1,8 @@
+.content{
+  grid-area: c;
+  background-color: #272B34;
+}
+.mainimg{
+  max-width: 80%;
+  margin: 10px 100px;
+}
