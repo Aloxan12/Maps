@@ -5,9 +5,9 @@ import thunkMiddleware from 'redux-thunk'
 import {appReducer} from './app-reducer'
 import {authReducer} from '../features/Login/auth-reducer'
 import createSagaMiddleware from 'redux-saga'
-import {takeEvery} from 'redux-saga/effects'
-import {fetchTasksWorkerSaga, removeTaskWorkerSaga, tasksWatcherSaga} from "../features/TodolistsList/tasks-sagas";
-import {appWatcherSaga, initializeAppWorkerSaga} from "./app-sagas";
+import {tasksWatcherSaga} from "../features/TodolistsList/tasks-sagas";
+import {appWatcherSaga} from "./app-sagas";
+import { all } from 'redux-saga/effects';
 
 // объединяя reducer-ы с помощью combineReducers,
 // мы задаём структуру нашего единственного объекта-состояния
@@ -28,8 +28,7 @@ export type AppRootStateType = ReturnType<typeof rootReducer>
 sagaMiddleware.run(rootWatcher)
 
 function* rootWatcher(){
-    yield appWatcherSaga();
-    yield tasksWatcherSaga()
+    yield all([appWatcherSaga(), tasksWatcherSaga()]);
 }
 
 
