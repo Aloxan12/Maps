@@ -1,11 +1,11 @@
 import './App.css'
-import {MapBlock} from "./components/Map/Map";
+import {MapPopup} from "./components/Map/MapPopup";
 
 function App() {
 
   return (
     <div>
-         <MapBlock />
+        <MapPopup />
     </div>
   )
 }

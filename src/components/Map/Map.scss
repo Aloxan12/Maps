@@ -2,36 +2,105 @@
   border-radius: 10px;
 }
 
-.custom-balloon{
-  width: 300px;
+.map-popup-wrap{
+  max-width: 1290px;
+  display: flex;
+  background-color: #ccc;
+  padding: 20px;
+  justify-content: space-between;
 
-  .header{
-    color: #09428E;
-    font-size: 16px;
-    line-height: 20px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .body{
-    display: flex;
-    flex-direction: column;
-    small{
-      font-size: 14px;
-      color: #9196A7;
-      margin-bottom: 6px;
-      font-weight: 500;
+  .city-list{
+    background-color: white;
+    width: 35%;
+    .city-item{
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      row-gap: 10px;
+      padding: 10px 0;
+      .body{
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+      }
+      .footer{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 10px;
+        font-size: 14px;
+        .btn{
+          border: 1px solid #D9DADE;
+          border-radius: 10px;
+          text-align: center;
+          padding: 12px 20px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .status{
+          font-weight: 600;
+          color: #388659;
+          &.wait{
+            color: #FF6700;
+          }
+        }
+      }
+      &.active{
+        .title{
+          font-weight: 600;
+          color: #09428E;
+        }
+        .footer {
+          .btn{
+            border-color: #09428E;
+            color: #09428E;
+          }
+        }
+      }
+      border-bottom: 1px solid #D9DADE;
     }
   }
-  .btn{
-    margin-top: 15px;
-    width: calc(100% - 4px);
-    border: 1px solid #09428E;
-    color: #09428E;
-    border-radius: 10px;
-    text-align: center;
-    padding: 12px 0;
-    font-size: 14px;
-    font-weight: bold;
-    cursor: pointer;
+  .map-wrap{
+    width: 60%;
+    padding: 0 10px;
+    .custom-balloon{
+      width: 300px;
+
+      .header{
+        color: #09428E;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-bottom: 8px;
+      }
+      .body{
+        display: flex;
+        flex-direction: column;
+        small{
+          font-size: 14px;
+          color: #9196A7;
+          margin-bottom: 6px;
+          font-weight: 500;
+        }
+      }
+      .btn{
+        margin-top: 15px;
+        width: calc(100% - 4px);
+        border: 1px solid #09428E;
+        color: #09428E;
+        border-radius: 10px;
+        text-align: center;
+        padding: 12px 0;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .map-wrap .custom-balloon{
+      width: 200px;
+    }
   }
 }
