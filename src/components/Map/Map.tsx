@@ -25,13 +25,18 @@ export const MapBlock = () => {
                         properties={{
                             balloonContent: `<div class="custom-balloon">
                             <div class="header">Проспект Победы, 245</div>
-                            <div>График работы</div>
-                            <div>Выбран</div>
+                            <div class="body">
+                                <small>
+                                    График работы
+                                </small>
+                                <span><b>Пн — Сб:</b> с 8:00 до 21:30</span>
+                                <span><b>Вс:</b> с 9:00 до 20:00</span>
+                            </div>
+                            <div class="btn">Выбрать</div>
                             </div>`,
                         }}
                         options={{
                             balloonPanelMaxMapArea: 0,
-                            balloonOffset:[10, 200]
                         }}
                         modules={['geoObject.addon.balloon']}
                     />
