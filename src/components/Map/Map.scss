@@ -1,5 +1,14 @@
+.ymaps-2-1-79-balloon__tail {
+  display: none !important;
+}
+
 .custom-balloon{
-  width: 500px;
-  background-color: red;
-  position: absolute;
+  width: 300px;
+
+  .header{
+    color: #09428E;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+  }
 }
