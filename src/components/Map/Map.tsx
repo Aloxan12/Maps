@@ -1,11 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import { YMaps, Map, Placemark } from '@pbe/react-yandex-maps';
 import './Map.scss'
-import {templateLayoutFactory} from 'yandex-maps'
-
-const CustomBallon = ()=>{
-    return <div>Моя кнопка</div>
-}
 
 export const MapBlock = () => {
     const [currentCoordinates, setCurrentCoordinates] = useState([55.751574, 37.573856]);
@@ -13,7 +8,6 @@ export const MapBlock = () => {
         [55.751574, 37.573856], // Координаты первого маркера
         [55.75222, 37.615555], // Координаты второго маркера
     ];
-    const ballon = templateLayoutFactory.createClass(`<CustomBallon />`)
 
     return (
         <YMaps>
@@ -27,23 +21,22 @@ export const MapBlock = () => {
                     <Placemark
                         key={index}
                         geometry={coordinates}
-                        options={{balloonLayout: ballon}}
-                        // properties={{
-                        //     balloonContent: `<div class="custom-balloon">
-                        //     <div class="header">Проспект Победы, 245</div>
-                        //     <div class="body">
-                        //         <small>
-                        //             График работы
-                        //         </small>
-                        //         <span><b>Пн — Сб:</b> с 8:00 до 21:30</span>
-                        //         <span><b>Вс:</b> с 9:00 до 20:00</span>
-                        //     </div>
-                        //     <div class="btn">Выбрать</div>
-                        //     </div>`,
-                        // }}
-                        // options={{
-                        //     balloonPanelMaxMapArea: 0,
-                        // }}
+                        properties={{
+                            balloonContent: `<div class="custom-balloon">
+                            <div class="header">Проспект Победы, 245</div>
+                            <div class="body">
+                                <small>
+                                    График работы
+                                </small>
+                                <span><b>Пн — Сб:</b> с 8:00 до 21:30</span>
+                                <span><b>Вс:</b> с 9:00 до 20:00</span>
+                            </div>
+                            <div class="btn">Выбрать</div>
+                            </div>`,
+                        }}
+                        options={{
+                            balloonPanelMaxMapArea: 0,
+                        }}
                         modules={['geoObject.addon.balloon']}
                     />
                 ))}
