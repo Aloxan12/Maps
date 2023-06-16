@@ -1,36 +1,40 @@
-.ymaps-2-1-79-balloon, .ymaps-2-1-79-balloon__layout{
+.ymaps-2-1-79-balloon, .ymaps-2-1-79-balloon__layout {
   border-radius: 10px;
 }
 
-.map-popup-wrap{
+.map-popup-wrap {
   max-width: 1290px;
   display: flex;
   border: 1px solid;
   padding: 20px;
   justify-content: space-between;
 
-  .city-list{
+  .city-list {
     background-color: white;
     width: 35%;
-    .city-item{
+
+    .city-item {
       width: 100%;
       display: inline-flex;
       flex-direction: column;
       row-gap: 10px;
       padding: 10px 0;
-      .body{
+
+      .body {
         font-size: 14px;
         display: flex;
         flex-direction: column;
       }
-      .footer{
+
+      .footer {
         display: flex;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         margin-right: 10px;
         font-size: 14px;
-        .btn{
+
+        .btn {
           border: 1px solid #D9DADE;
           border-radius: 10px;
           text-align: center;
@@ -38,53 +42,63 @@
           font-weight: bold;
           cursor: pointer;
         }
-        .status{
+
+        .status {
           font-weight: 600;
           color: #388659;
-          &.wait{
+
+          &.wait {
             color: #FF6700;
           }
         }
       }
-      &.active{
-        .title{
+
+      &.active {
+        .title {
           font-weight: 600;
           color: #09428E;
         }
+
         .footer {
-          .btn{
+          .btn {
             border-color: #09428E;
             color: #09428E;
           }
         }
       }
+
       border-bottom: 1px solid #D9DADE;
     }
   }
-  .map-wrap{
+
+  .map-wrap {
     width: 60%;
     padding: 0 10px;
-    .custom-balloon{
+
+    .custom-balloon {
       width: 300px;
 
-      .header{
+      .header {
         color: #09428E;
         font-size: 16px;
         line-height: 20px;
         font-weight: 600;
         margin-bottom: 8px;
       }
-      .body{
+
+      .body {
         display: flex;
         flex-direction: column;
-        small{
+
+        small {
           font-size: 14px;
           color: #9196A7;
           margin-bottom: 6px;
           font-weight: 500;
         }
       }
-      .btn{
+
+      .btn {
         margin-top: 15px;
         width: calc(100% - 4px);
         border: 1px solid #09428E;
@@ -95,12 +109,30 @@
         font-size: 14px;
         font-weight: bold;
         cursor: pointer;
+
+        :hover ~ .map-bg {
+          color: black;
+          display: block;
+        }
       }
     }
   }
+
   @media (max-width: 1000px) {
-    .map-wrap .custom-balloon{
+    .map-wrap .custom-balloon {
       width: 200px;
     }
   }
+}
+
+.map-bg {
+  display: none;
+  position: fixed;
+  opacity: .5;
+  // position: fixed;
+  background-color: black;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

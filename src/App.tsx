@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
         <MapPopup />
-    </div>
+          </div>
   )
 }
 
