@@ -472,7 +472,7 @@
   resolved "https://registry.yarnpkg.com/@types/semver/-/semver-7.5.0.tgz#591c1ce3a702c45ee15f47a42ade72c2fd78978a"
   integrity sha512-G8hZ6XJiHnuhQKR7ZmysCeJWE08o8T0AXtk5darsCaTVsYZhhgUrq53jizaR2FvsoeCwJhlmwTjkXBY5Pn/ZHw==
 
-"@types/yandex-maps@2.1.29":
+"@types/yandex-maps@2.1.29", "@types/yandex-maps@^2.1.29":
   version "2.1.29"
   resolved "https://registry.yarnpkg.com/@types/yandex-maps/-/yandex-maps-2.1.29.tgz#88dba8d99a4a05c6bf6d7fbc36c78e891ef30d38"
   integrity sha512-nuibRWj3RU/9KXlCzTrRtDE+n6V9l7NbT9JakicqZ5OXIdwyb6blvV2Uwn6lB58WYm3DSUDP2I2AWlnWMc8z2w==
@@ -1613,6 +1613,11 @@ yallist@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/yallist/-/yallist-4.0.0.tgz#9bb92790d9c0effec63be73519e11a35019a3a72"
   integrity sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==
+
+yandex-maps@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/yandex-maps/-/yandex-maps-0.0.1.tgz#aeea2ebcc32a700c06fc3193e36e886f92e7cdd0"
+  integrity sha512-7gW254ut4HEpSyQEaztSB4lZiuIz/DtS4jvfbJJWHxpuztMNZtYmSVBqhGRSaBgESe8f6T7/fAtEO/FkRHzdXQ==
 
 yocto-queue@^0.1.0:
   version "0.1.0"
