@@ -1,0 +1,133 @@
+.geocoder-wrap{
+    display: flex;
+    flex-direction: column;
+
+
+    .wrapper-field {
+        width: 100%;
+        position: relative;
+        offset: none;
+        label {
+            line-height: 1.5;
+            font-size: 13px;
+            color: darkblue;
+            font-weight: 600;
+
+            .req {
+                color: red;
+            }
+        }
+
+        label+.wrapper-input {
+            margin-top: 5px;
+        }
+
+        .wrapper-input {
+            border-radius: 10px;
+            width: 100%;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            height: 50px;
+            background-color: lightgray;
+            border: 2px solid transparent;
+
+            &:hover,
+            &.active-value {
+                border: 2px solid #d9e0eb;
+                padding: 0 18px;
+            }
+
+            &.focus {
+                border: 2px solid blue;
+                padding: 0 18px;
+            }
+
+            .field {
+                font-size: 16px;
+                line-height: 1;
+                font-weight: 500;
+                width: 100%;
+                background-color: inherit;
+                height: 80%;
+                color: darkblue;
+
+                &::placeholder {
+                    color: gray;
+                }
+
+                &+.an-ico {
+                    margin-left: 12px;
+                }
+
+                &+.btn {
+                    margin-left: 12px;
+                }
+            }
+
+            .an-ico {
+                font-size: 18px;
+                cursor: pointer;
+                color: blue;
+
+                &+.field {
+                    margin-left: 12px;
+                }
+            }
+        }
+
+        .validate {
+            display: flex;
+            gap: 5px;
+            width: 100%;
+            margin-top: 5px;
+            position: absolute;
+            font-size: 13px;
+            line-height: 1;
+
+            &.error {
+                color: red;
+
+                img {
+                    width: 13.33px;
+                    height: 13.33px;
+                }
+            }
+
+            &.placeholder {
+                color: gray;
+            }
+        }
+
+        &.error {
+            .wrapper-input {
+                background-color: #fff5f5;
+                border: 2px solid red;
+                padding: 0 18px;
+            }
+        }
+
+        &.disabled {
+            .wrapper-input {
+                .field {
+                    &::placeholder {
+                        color: #c4c9da;
+                    }
+                }
+
+                &:hover {
+                    border: none;
+                    padding: 0 20px;
+                }
+            }
+
+            label {
+                color: #c4c9da;
+
+                .req {
+                    color: #c4c9da;
+                }
+            }
+        }
+    }
+}
